@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('experienca_user', function (Blueprint $table) {
             $table->id();
-            $table->integer('detail_users_id')->nullable();
+            $table->foreignId('detail_user_id')->nullable()->constrained('detail_user')->onDelete('cascade');
             $table->string('experienca')->nullable();
             $table->softDeletes();
             $table->timestamps();
