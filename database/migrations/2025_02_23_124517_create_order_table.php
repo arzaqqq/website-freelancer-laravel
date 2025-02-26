@@ -7,19 +7,19 @@ use Illuminate\Database\Migrations\Migration;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.fgfgfgf
      */
     public function up(): void
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id();
-            $table->integer('buyer_id')->nullable();
-            $table->integer('freelancer_id')->nullable();
-            $table->integer('service_id')->nullable();
+            $table->foreignId('buyer_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->foreignId('freelancer_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->foreignId('service_id')->nullable()->constrained('service')->onDelete('cascade');
             $table->longtext('file')->nullable();
             $table->longtext('note')->nullable();
             $table->date('expired')->nullable();
-            $table->integer('order_status_id')->nullable();
+            $table->foreignId('order_status_id')->nullable()->constrainde('order_status')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });
