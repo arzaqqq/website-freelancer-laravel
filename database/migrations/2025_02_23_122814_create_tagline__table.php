@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tagline_', function (Blueprint $table) {
             $table->id();
-            $table->integer('service_id')->nullable();
+            $table->foreignId('service_id')->nullable()->constrained('service')->onDelete('cascade');
             $table->string('tagline');
             $table->softDeletes();
             $table->timestamps();
