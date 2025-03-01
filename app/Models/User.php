@@ -67,4 +67,30 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    // RELASI
+    public function detail_user()
+    {
+        return $this->hasOne(DetailUser::class, 'users_id');
+    }
+
+    public function service()
+    {
+        return $this->hasMany(Service::class, 'users_id');
+    }
+
+    public function order_buyer()
+    {
+        return $this->hasMany(Order::class, 'buyer_id');
+    }
+
+    public function order_freelancer()
+    {
+        return $this->hasMany(Order::class, 'freelacer_id');
+    }
+
+
+
+
 }
