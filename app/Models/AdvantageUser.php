@@ -8,4 +8,9 @@ class AdvantageUser extends Model
 {
     use softDeletes;
     protected $guarded = [];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class, 'service_id');
+    }
 }
