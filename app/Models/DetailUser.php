@@ -10,4 +10,13 @@ class DetailUser extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'users_id', 'id');
+    }
+
+    
 }
