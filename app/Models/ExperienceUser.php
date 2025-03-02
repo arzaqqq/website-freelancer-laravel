@@ -9,4 +9,9 @@ class ExperienceUser extends Model
 {
     use softDeletes;
     protected $guarded = [];
+
+    public function detail_user()
+    {
+        return $this->belongsTo(DetailUser::class, 'detail_user_id' ,'id');
+    }
 }
