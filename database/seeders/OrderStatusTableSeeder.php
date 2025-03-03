@@ -15,13 +15,13 @@ class OrderStatusTableSeeder extends Seeder
     {
         OrderStatus::create([
             'name' => 'pending',
-            'cresated_at' => now(),
+            'created_at' => now(),
             'updated_at' => now()
         ]);
 
         OrderStatus::create([
             'name' => 'Progres',
-            'cresated_at' => now(),
+            'created_at' => now(),
             'updated_at' => now()
         ]);
 

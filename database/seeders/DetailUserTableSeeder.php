@@ -20,7 +20,7 @@ class DetailUserTableSeeder extends Seeder
             'role' => 'Website Deeveloper',
             'contact_number' => '08123456789',
              'biography' => '',
-            'cresated_at' => now(),
+            'created_at' => now(),
             'updated_at' => now()
         ]);
 
@@ -30,7 +30,7 @@ class DetailUserTableSeeder extends Seeder
             'role' => 'Back end Deeveloper',
             'contact_number' => '08123456744',
              'biography' => '',
-            'cresated_at' => now(),
+            'created_at' => now(),
             'updated_at' => now()
         ]);
     }

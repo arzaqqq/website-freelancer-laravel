@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('admin123'),
             // 'password' => bcrypt('admin123'),
             'remember_token' => Str::random(10),
-            'cresated_at' => now(),
+            'created_at' => now(),
             'updated_at' => now()
         ]);
 
@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('mirza123'),
             // 'password' => bcrypt('admin123'),
             'remember_token' => Str::random(10),
-            'cresated_at' => now(),
+            'created_at' => now(),
             'updated_at' => now()
         ]);
     }
