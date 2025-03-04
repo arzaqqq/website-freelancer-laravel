@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MyOrderController extends Controller
 {
@@ -59,6 +59,18 @@ class MyOrderController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
+    {
+        //
+    }
+
+
+    // CUSTOM
+    public function accepted($id)
+    {
+        //
+    }
+
+    public function rejected($id)
     {
         //
     }

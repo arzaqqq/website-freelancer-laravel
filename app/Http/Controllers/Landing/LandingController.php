@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Landing;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class LandingController extends Controller
 {
@@ -61,5 +61,25 @@ class LandingController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function explore()
+    {
+
+    }
+
+    public function detail($id)
+    {
+
+    }
+
+    public function booking($id)
+    {
+
+    }
+
+    public function detail_booking($id)
+    {
+        
     }
 }

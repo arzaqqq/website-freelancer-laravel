@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class RequestController extends Controller
 {
@@ -61,5 +61,11 @@ class RequestController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    //CUSTOM
+    public function approve($id)
+    {
+        
     }
 }
