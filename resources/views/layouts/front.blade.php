@@ -5,7 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        @include('includes.Landing.meta')
+
+        {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+        <title>@yield('title') | SERV</title>
+
+        @stack('before-wtyle')
+
+        @include('includes.Landing.style')
+
+        @stack('after-style')
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,10 +27,24 @@
         @livewireStyles
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+        <div class="antaialiased">
+            <div class="relative">
+                {{-- @include('sweetalert::alert') --}}
+
+                @yield('content')
+
+                @stack('before-script')
+
+                @include('includes.Landing.footer')
+
+                @stack('before-script')
+
+                @include('components.modals.login')
+                @include('components.modals.register')
+                @include('components.modals.register-success')
+            </div>
         </div>
 
-        @livewireScripts
+
     </body>
 </html>
