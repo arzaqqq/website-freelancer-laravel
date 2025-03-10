@@ -10,7 +10,7 @@
         {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
         <title>@yield('title') | SERV</title>
 
-        @stack('before-wtyle')
+        @stack('before-style')
 
         @include('includes.Landing.style')
 
@@ -29,15 +29,19 @@
     <body>
         <div class="antaialiased">
             <div class="relative">
+
+                @include('includes.Landing.header')
                 {{-- @include('sweetalert::alert') --}}
 
-                @yield('content')
-
-                @stack('before-script')
+                     @yield('content')
 
                 @include('includes.Landing.footer')
 
                 @stack('before-script')
+
+                @include('includes.Landing.script')
+
+                @stack('after-script')
 
                 @include('components.modals.login')
                 @include('components.modals.register')
